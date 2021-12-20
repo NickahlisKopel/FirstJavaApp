@@ -15,13 +15,15 @@ public class Main {
         System.out.println(giveMeSomething("something"));
 
     }
-
+    //01
     public static int getFirstValue(int[] arr) {
         return arr[0];
     }
+    //02
     public static int addition(int num) {
         return num + 1;
     }
+    //03
     public static int search(int[] arr, int item) {
         int index = 0;
         for(int i = 0; i < arr.length; i++){
@@ -34,9 +36,11 @@ public class Main {
         }
         return index;
     }
+    //04
     public static int convert(int minutes) {
         return minutes * 60;
     }
+    //05
     public static String giveMeSomething(String a) {
         String part1 = "something";
         return part1 + " " + a;
