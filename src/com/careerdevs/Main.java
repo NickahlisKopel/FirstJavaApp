@@ -13,6 +13,14 @@ public class Main {
         System.out.println(convert(5));
         //https://edabit.com/challenge/ZuoKAgmH8G2vHtLzi
         System.out.println(giveMeSomething("something"));
+        //https://edabit.com/challenge/KWRQP86jxzM9SZmRM
+        System.out.println(reverse(false));
+        //https://edabit.com/challenge/5LnycSd2xT4uwZCpi
+        System.out.println(countWords("It's high noon"));
+        //https://edabit.com/challenge/aWzxPLibBLJgn8AbZ
+        System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
+        //https://edabit.com/challenge/GBKphScsmDi9ek3ra
+        System.out.println(getCount("Celebration"));
 
     }
     //01
@@ -44,5 +52,37 @@ public class Main {
     public static String giveMeSomething(String a) {
         String part1 = "something";
         return part1 + " " + a;
+    }
+    //06
+    public static boolean reverse(boolean b) {
+        return !(b);
+    }
+    //07
+    public static int countWords(String s) {
+        String[] split = s.split(" ");
+        return split.length;
+    }
+    //08
+    public static boolean existsHigher(int[] arr, int n) {
+        boolean pass = false;
+        for(int i = 0; i < arr.length; i++){
+            if(n < arr[i]){
+                pass = true;
+            }
+        }
+        return pass;
+    }
+    //09
+    public static int getCount(String str) {
+        int vowelsCount = 0;
+        String[] arr = str.split("");
+        for(int i = 0; i < arr.length; i++){
+
+            if(arr[i].equals("A") || arr[i].equals("E") || arr[i].equals("I") || arr[i].equals("O") || arr[i].equals("U") || arr[i].equals("a") || arr[i].equals("e") || arr[i].equals("i") || arr[i].equals("o") || arr[i].equals("u")){
+                vowelsCount++;
+            }
+        }
+
+        return vowelsCount;
     }
 }
