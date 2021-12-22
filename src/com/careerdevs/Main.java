@@ -21,6 +21,10 @@ public class Main {
         System.out.println(existsHigher(new int[] {5, 3, 15, 22, 4}, 10));
         //https://edabit.com/challenge/GBKphScsmDi9ek3ra
         System.out.println(getCount("Celebration"));
+        //
+        //System.out.println(rev(456));
+        //https://edabit.com/challenge/9D39q2q9yAFCDM9da
+        System.out.println(minutesToSeconds("1:30"));
 
     }
     //01
@@ -84,5 +88,17 @@ public class Main {
         }
 
         return vowelsCount;
+    }
+    //10
+
+    //11
+    public static int minutesToSeconds(String tm) {
+        String[] arr = tm.split(":");
+        if (Integer.parseInt(arr[1]) > 60){
+            return -1;
+        }else{
+            int finish = (Integer.parseInt(arr[0]) * 60) + Integer.parseInt(arr[1]);
+            return finish;
+        }
     }
 }
