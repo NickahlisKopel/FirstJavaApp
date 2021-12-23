@@ -33,6 +33,13 @@ public class Main {
         System.out.println(sum(3,2));
         //https://edabit.com/challenge/5gpukjfi5rAH8MvKF
         System.out.println(isSameNum(3,3));
+        //https://edabit.com/challenge/eqcCH2WbEXFLDyiQi
+        System.out.println(calcAge(2));
+        //https://edabit.com/challenge/JAtN6KLtahAkmT3n3
+        System.out.println(helloName("Nick"));
+        //https://edabit.com/challenge/5gPCp7v7iDWZvb4YQ
+        System.out.println(reverse("test"));
+        //
 
 
     }
@@ -132,4 +139,22 @@ public class Main {
             return false;
         }
     }
+    //12
+    public static int calcAge(int age) {
+        return age * 365;
+    }
+    //13
+    public static String helloName(String name) {
+        return "Hello " + name + "!";
+    }
+    //14
+    public static String reverse(final String str) {
+        String[] rev = str.split("");
+        String finish = "";
+        for(int i = rev.length - 1; i >= 0; i--){
+            finish += rev[i];
+        }
+        return finish;
+    }
+    //
 }
