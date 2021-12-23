@@ -1,5 +1,7 @@
 package com.careerdevs;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,6 +27,8 @@ public class Main {
         //System.out.println(rev(456));
         //https://edabit.com/challenge/9D39q2q9yAFCDM9da
         System.out.println(minutesToSeconds("1:30"));
+        //https://edabit.com/challenge/hymPkXdhmDQLe87QT
+        System.out.println(differenceMaxMin(new int[]{10, 4, 1, 2, 8, 91}));
 
     }
     //01
@@ -54,8 +58,12 @@ public class Main {
     }
     //05
     public static String giveMeSomething(String a) {
-        String part1 = "something";
-        return part1 + " " + a;
+        String part1 = "something ";
+        return part1 + a;
+    }
+    public static String giveMeSomething2(String a) {
+
+        return "something " + a;
     }
     //06
     public static boolean reverse(boolean b) {
@@ -100,5 +108,11 @@ public class Main {
             int finish = (Integer.parseInt(arr[0]) * 60) + Integer.parseInt(arr[1]);
             return finish;
         }
+    }
+    //12
+    public static int differenceMaxMin(int[] arr) {
+        Arrays.sort(arr);
+        return arr[arr.length - 1] - arr[0];
+
     }
 }
