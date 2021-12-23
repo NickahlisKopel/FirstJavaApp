@@ -29,6 +29,11 @@ public class Main {
         System.out.println(minutesToSeconds("1:30"));
         //https://edabit.com/challenge/hymPkXdhmDQLe87QT
         System.out.println(differenceMaxMin(new int[]{10, 4, 1, 2, 8, 91}));
+        //https://edabit.com/challenge/8Ty2vq2YtcBp6CFc8
+        System.out.println(sum(3,2));
+        //https://edabit.com/challenge/5gpukjfi5rAH8MvKF
+        System.out.println(isSameNum(3,3));
+
 
     }
     //01
@@ -97,9 +102,9 @@ public class Main {
 
         return vowelsCount;
     }
-    //10
+    //BONUS 01
 
-    //11
+    //BONUS 02
     public static int minutesToSeconds(String tm) {
         String[] arr = tm.split(":");
         if (Integer.parseInt(arr[1]) > 60){
@@ -109,10 +114,22 @@ public class Main {
             return finish;
         }
     }
-    //12
+    //BONUS 03
     public static int differenceMaxMin(int[] arr) {
         Arrays.sort(arr);
         return arr[arr.length - 1] - arr[0];
 
+    }
+    //10
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+    //11
+    public static boolean isSameNum(int x, int y) {
+        if (x == y){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
