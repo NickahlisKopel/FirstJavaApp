@@ -39,6 +39,12 @@ public class Main {
         System.out.println(helloName("Nick"));
         //https://edabit.com/challenge/5gPCp7v7iDWZvb4YQ
         System.out.println(reverse("test"));
+        //https://edabit.com/challenge/B4HjZbBh9yuELmjna
+        System.out.println(triArea(3,2));
+        //https://edabit.com/challenge/KnRj8TSD63JBpzDfi
+        System.out.println(divisible(100));
+        //https://edabit.com/challenge/rYD9NTBmNhaPM6wx2
+        System.out.println(canCapture(new String[]{"A8", "E8"}));
         //
 
 
@@ -127,6 +133,8 @@ public class Main {
         return arr[arr.length - 1] - arr[0];
 
     }
+    //BONUS 04
+
     //10
     public static int sum(int a, int b) {
         return a + b;
@@ -156,5 +164,24 @@ public class Main {
         }
         return finish;
     }
-    //
+    //BONUS 01
+    public static int triArea(int base, int height) {
+        return ((base * height)/2);
+    }
+    //BONUS 02
+    public static boolean divisible(int num) {
+        if (num % 100 == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //BONUS 03
+    public static boolean canCapture(String[] rooks) {
+        if(rooks[0].charAt(0) == rooks[1].charAt(0) || rooks[0].charAt(1) == rooks[1].charAt(1)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
