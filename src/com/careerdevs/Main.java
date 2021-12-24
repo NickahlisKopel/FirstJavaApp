@@ -45,7 +45,8 @@ public class Main {
         System.out.println(divisible(100));
         //https://edabit.com/challenge/rYD9NTBmNhaPM6wx2
         System.out.println(canCapture(new String[]{"A8", "E8"}));
-        //
+        //https://edabit.com/challenge/EaWY5d2pYBckrkAnS
+        System.out.println(doubleLetters("loop"));
 
 
     }
@@ -134,7 +135,17 @@ public class Main {
 
     }
     //BONUS 04
-
+    public static boolean doubleLetters(String word) {
+        boolean finish = false;
+        for (int i = 0; i < word.length() - 1; i++){
+            if (word.charAt(i) == word.charAt(i + 1)){
+                finish = true;
+            }else{
+                continue;
+            }
+        }
+        return finish;
+    }
     //10
     public static int sum(int a, int b) {
         return a + b;
