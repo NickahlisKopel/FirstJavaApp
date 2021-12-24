@@ -93,6 +93,25 @@ public class Main {
         String[] split = s.split(" ");
         return split.length;
     }
+    //07 V2
+    public static int countWords2(String s) {
+        //count the spaces
+        String newStr = s.trim(); //cleaning up the extra spaces
+
+        if(newStr.equals("")){
+            return 0;
+        }
+        //any empty strings will not pass this line of code.
+        int numOfSpaces = 0;
+
+        //itterate through the string one char at a time, count the spaces
+        for(int i = 0; i < newStr.length(); i++){
+            if (newStr.charAt(i) == ' '){
+                numOfSpaces++;
+            }
+        }
+        return numOfSpaces + 1;
+    }
     //08
     public static boolean existsHigher(int[] arr, int n) {
         boolean pass = false;
