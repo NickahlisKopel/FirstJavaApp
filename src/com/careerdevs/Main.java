@@ -47,6 +47,14 @@ public class Main {
         System.out.println(canCapture(new String[]{"A8", "E8"}));
         //https://edabit.com/challenge/EaWY5d2pYBckrkAnS
         System.out.println(doubleLetters("loop"));
+        //https://edabit.com/challenge/Nz6AzC4v8jyMCH2Tu
+        System.out.println(makesTen(1,9));
+        //https://edabit.com/challenge/HDWqr2HdC3dwHYeBx
+        System.out.println(numberSyllables("word-ing"));
+        //https://edabit.com/challenge/D6Lcut2s2gEzdCPvv
+        System.out.println(match("hello", "hELLo"));
+        //https://edabit.com/challenge/wFPAkqT72h4WGEuYN
+        System.out.println(hackerSpeak("javascript is cool"));
 
 
     }
@@ -213,5 +221,29 @@ public class Main {
         }else{
             return false;
         }
+    }
+    //15
+    public static boolean makesTen(int a, int b) {
+        if(a == 10 || b == 10){
+            return true;
+        }else if ((a + b) == 10){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    //16
+    public static int numberSyllables(String word) {
+        String[] arr = word.split("-");
+        return arr.length;
+    }
+    //17
+    public static boolean match(String str1, String str2) {
+        return str1.equalsIgnoreCase(str2);
+    }
+    //18
+    public static String hackerSpeak(String str) {
+        String replace = str.replaceAll("a","4").replaceAll("e","3").replaceAll("i","1").replaceAll("o","0").replaceAll("s","5");
+        return replace;
     }
 }
